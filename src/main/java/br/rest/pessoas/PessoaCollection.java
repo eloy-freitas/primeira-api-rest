@@ -5,8 +5,10 @@ import java.util.ArrayList;
 public class PessoaCollection {
 	private ArrayList<PessoaModel> array;
 	
+
 	public PessoaCollection() {
 		array = new ArrayList<>();
+		
 	}
 	
 	public void addPessoa(PessoaModel p) {
