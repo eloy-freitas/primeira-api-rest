@@ -12,18 +12,8 @@ public class PessoaView {
     
   
 	public String listarPessoasHTML() {
-		
-		return "<html lang=pt-br>" +
-		 " <head>"+ 
-		 " 	<title>Lista de pessoas</title>"+
-		 " 	<meta charset=utf-8>"+
-		 " </head>" +
-         " <body>" +
-         "<table style=" + "width:100% "+ ">" +
-         p.listarPessoas() +
-         "</table>" +
-		 " </body>" +
-		 "</html>";
+		return "<html lang=pt-br><head><title>Lista de pessoas</title><meta charset=utf-8></head><body><table style=\"width:100%\">"
+        + p.listarPessoas() + "</table></body></html>";
 	}
 
 

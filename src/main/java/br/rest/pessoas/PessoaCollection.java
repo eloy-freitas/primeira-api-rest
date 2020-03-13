@@ -17,18 +17,9 @@ public class PessoaCollection {
 	}
 
 	public String listarPessoas(){
-		String resposta =" <h1>Lista de pessoas: </h1>" 
-							+	"<tr>" 
-							+	"	<th>Id</th>"
-							+	"	<th>Nome</th>"
-							+ 	"	<th>Idade</th>"
-							+   "</tr>";
+		String resposta =" <h1>Lista de pessoas: </h1><tr><th>Id</th><th>Nome</th><th>Idade</th></tr>";
 		for(PessoaModel p : this.array) {
-			resposta  = resposta + "<tr>"
-									  + "<td>" + p.getId() + " </td> " 
-									  + "<td>" + p.getNome() + "</td>"
-									  + "<td>" + p.getIdade() + "</td>" +
-									  "</tr>";
+			resposta  = resposta + "<tr><td>" + p.getId() + " </td> <td>" + p.getNome() + "</td><td>" + p.getIdade() + "</td></tr>";
 			
 		}
 		return resposta;
