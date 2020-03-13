@@ -9,17 +9,21 @@ public class PessoaView {
         p = collection;
     }
     
+    
+  
 	public String listarPessoasHTML() {
 		
-		return "<html lang=pt-br>"
-		+ " <head>"
-		+ " 	<title>Lista de pessoas</title>"
-		+ " 	<meta charset=utf-8>"
-		+ " </head>"
-		+ " <body>"
-		+ p.listarPessoas() 
-		+ " </body>"
-		+ "</html>";
+		return "<html lang=pt-br>" +
+		 " <head>"+ 
+		 " 	<title>Lista de pessoas</title>"+
+		 " 	<meta charset=utf-8>"+
+		 " </head>" +
+         " <body>" +
+         "<table style=" + "width:100% "+ ">" +
+         p.listarPessoas() +
+         "</table>" +
+		 " </body>" +
+		 "</html>";
 	}
 
 
