@@ -5,11 +5,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+import br.rest.pessoas.PessoaView;
 @RestController
 public class PessoaController {
     
     private PessoaCollection pc;
+    private PessoaView pw;
     private int idPessoa;
     public PessoaController(){
         pc =  new PessoaCollection();
@@ -22,7 +23,7 @@ public class PessoaController {
 			@RequestParam(value = "idade", defaultValue = "null") int idade) {
 		
 			PessoaModel p = new PessoaModel(id, nome, idade);
-		return "id = " + p.getId() + "\nnome = " + p.getNome() + "\nidade = " + p.getIdade();
+		return "id = " + p.getId() + " nome = " + p.getNome() + " idade = " + p.getIdade();
 	}
 	
 	@GetMapping("/addpessoa")
@@ -45,7 +46,9 @@ public class PessoaController {
     
     @GetMapping("/imprimirpessoas")
     public String imprimir(){
-       return pc.listPessoas();
+       pw = new PessoaView(pc);
+       String resposta = pw.listarPessoasHTML();
+       return resposta;
     }
 	
 

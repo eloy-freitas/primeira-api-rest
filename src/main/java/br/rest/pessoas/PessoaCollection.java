@@ -2,6 +2,7 @@ package br.rest.pessoas;
 
 import java.util.ArrayList;
 
+
 public class PessoaCollection {
 	private ArrayList<PessoaModel> array;
 	
@@ -15,12 +16,14 @@ public class PessoaCollection {
 		this.array.add(p);
 	}
 	
-	public String listPessoas() {
-		String resposta = "";
+	
+	
+	public String listarPessoas(){
+		String resposta =" <h1>Lista de pessoas: </h1>";
 		for(PessoaModel p : this.array) {
-			resposta = resposta + "id = " + p.getId() +
-					"; nome = " + p.getNome() +
-					"; idade = " + p.getIdade() + ";\n";
+			resposta  = resposta + "<h2> id = " + p.getId() +
+					"nome = " + p.getNome() +
+					" idade = " + p.getIdade() + "</h2><br>";
 			
 		}
 		return resposta;
