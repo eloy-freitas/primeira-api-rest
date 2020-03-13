@@ -17,7 +17,7 @@ public class PessoaController {
         idPessoa = 0;
     }
 
-	@GetMapping("/getpessoa")
+	/*@GetMapping("/getpessoa")
 	public String getPessoa(@RequestParam(value = "id", defaultValue = "null") int id, 
 			@RequestParam(value = "nome", defaultValue = "null") String nome,
 			@RequestParam(value = "idade", defaultValue = "null") int idade) {
@@ -33,7 +33,7 @@ public class PessoaController {
                 PessoaModel p = new PessoaModel(idPessoa, nome, idade);
                 pc.addPessoa(p);
                 return p.getNome() + "foi adicionado com sucesso!";
-    }
+    }*/
 	
 	@RequestMapping(path="/{nome}/{idade}")
 	public String addP(@PathVariable("nome") String nome, @PathVariable("idade") int idade) {
